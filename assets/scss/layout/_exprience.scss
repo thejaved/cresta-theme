@@ -1,0 +1,208 @@
+@use '../utils' as *;
+
+/*=============================
+    09. exprience css start 
+===============================*/
+
+.tg-exp{
+    &-top{
+        &-wrap{
+            margin-bottom: 50px;
+        }
+        &-text{
+            & p{
+                margin-bottom: 0;
+            }
+        }
+    }
+    &-item{
+        padding: 35px 0;
+        border-bottom: 1px solid var(--tg-border-1);
+        &.tg-reveal-border {
+            border: none;
+        }
+        &:hover {
+            & .tg-exp-arrow {
+                & i {
+                    background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-transition: all 0.3s ease-out 0s;
+                    -moz-transition: all 0.3s ease-out 0s;
+                    -ms-transition: all 0.3s ease-out 0s;
+                    -o-transition: all 0.3s ease-out 0s;
+                    transition: all 0.3s ease-out 0s;
+                }
+            }
+        }
+    }
+    &-content{
+        margin-right: 100px;
+        @media #{$xs}{
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+        & p{
+            margin-bottom: 0;
+            @media #{$lg,$md,$xs}{
+                font-size: 16px;
+            }
+        }
+    }
+    &-top-text {
+        & p {
+            @media #{$lg,$md,$xs}{
+                font-size: 16px;
+            }
+        }
+    }
+    &-title-sm{
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: -0.64px;
+        margin-bottom: 15px;
+        @media #{$xl}{
+            font-size: 28px;
+        }
+        @media #{$lg}{
+            font-size: 24px;
+        }
+        @media #{$md,$xs}{
+            font-size: 25px;
+        }
+        @media #{$sm}{
+            font-size: 27px;
+        }
+    }
+    &-arrow {
+        & i {
+            font-size: 28px;
+            color: var(--tg-common-black);
+        }
+    }
+    &-wrap {
+        & .tg-exp-title-box{
+            @media #{$xs}{
+                margin-bottom: 30px;
+            }
+        }
+        & .tg-exp-item {
+            padding: 38px 50px;
+            padding-right: 90px;
+            border-radius: 5px;
+            border: 1px solid var(--tg-border-1);
+            @media #{$xs}{
+                padding: 38px 30px;
+            }
+        }
+        & .tg-exp-title-sm {
+            margin-bottom: 20px;
+        }
+        & .tg-exp-content{
+            @media #{$md,$xs}{
+                margin-right: 0;
+            }
+        }
+        & .tg-reveal-item{
+            & .tg-reveal-bg {
+                width: 250px;
+                height: 250px;
+                & img {
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+.tg-reveal-item{
+    & .tg-reveal-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+        margin: -150px 0 0 -150px;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 99;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        -webkit-transition: opacity 0.3s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        -moz-transition: opacity 0.3s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        -ms-transition: opacity 0.3s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        -o-transition: opacity 0.3s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: opacity 0.3s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    &:hover{
+        & .tg-reveal-bg{
+            opacity: 1;
+        }
+    }
+}
+
+.tg-exp-2 {
+    &-item {
+        padding-left: 40px;
+        border-radius: 5px;
+        background-color: var(--tg-common-white);
+        box-shadow: 0px 5px 60px 0px rgba(0, 0, 0, 0.05);
+        position: relative;
+        @media #{$xs}{
+            padding: 30px;
+        }
+        &:hover {
+            &::after{
+                opacity: 1;
+                visibility: visible;
+                left: -5px;
+            }
+            & .tg-exp-2-thumb {
+                & img {
+                    transform: scale(1.1);
+
+                }
+            }
+        }
+        &::after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            height: 100%;
+            width: 100%;
+            left: 0px;
+            border-radius: 5px;
+            z-index: -1;
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+            background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+        }
+    }
+    &-thumb {
+        flex: 0 0 auto;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        border-radius: 0 5px 5px 0;
+        @media #{$xs} {
+            border-radius: 5px;
+        }
+        & img {
+            height: 100%;
+            object-fit: cover;
+            transition: 1.3s all ease;
+            border-radius: 0 5px 5px 0;
+            @media #{$xs} {
+                border-radius: 5px;
+            }
+        }
+    }
+
+    &-button {
+        margin-right: 50px;
+    }
+}

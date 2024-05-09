@@ -1,0 +1,102 @@
+@use '../utils' as *;
+
+/*=============================
+    00. Breadcrumb
+===============================*/
+.z-index-minus {
+    z-index: -1 !important;
+}
+
+.tg-breadcrumb {
+    &-height {
+        height: 440px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media #{$xxl}{
+            height: 380px;
+        }
+        @media #{$xl}{
+            height: 350px;
+        }
+        @media #{$lg}{
+            height: 320px;
+        }
+        @media #{$md}{
+            height: 320px;
+        }
+        @media #{$xs}{
+            height: 280px;
+        }
+        @media #{$sm}{
+            height: 340px;
+        }
+    }
+    &-overley {
+        position: relative;        
+        &::before{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            background-color: var(--tg-common-black);
+            content: "";
+        }
+    }
+    &__content {
+        text-align: center;
+    }
+    &__title {
+        font-size: 74px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        color: var(--tg-common-white);
+        @media #{$xxl}{
+            font-size: 60px;
+        }
+        @media #{$xl}{
+            font-size: 55px;
+        }
+        @media #{$lg} {
+            font-size: 45px;
+        }
+        @media #{$md} {
+            font-size: 50px;
+        }
+        @media #{$xs} {
+            font-size: 44px;
+            margin-bottom: 10px;
+        }
+        @media #{$sm} {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+    }
+    &__list{
+        & span {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--tg-common-white);
+            @media #{$lg} {
+                font-size: 20px;
+            }
+            @media #{$md} {
+                font-size: 19px;
+            }
+            @media #{$xs} {
+                font-size: 18px;
+            }
+            &.dvdr{
+                margin: 0 15px;
+                font-size: 14px;
+                transform: translateY(-2px);
+                display: inline-block;
+            }
+        }
+    }
+}

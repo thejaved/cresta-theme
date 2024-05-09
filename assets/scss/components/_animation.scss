@@ -1,0 +1,136 @@
+@use '../utils' as *;
+
+/*=============================
+    00. Keyframes
+===============================*/
+
+@keyframes scrollText-2 {
+	from   { transform: translateX(-50%); }
+	to { transform: translateX(0%); }
+}
+@keyframes tfLeftToRight {
+  49% {
+      transform: translateX(30%);
+  }
+  50% {
+      opacity: 0;
+      transform: translateX(-30%);
+  }
+  51% {
+      opacity: 1;
+  }
+}
+
+// animation  icon-bounce
+@keyframes icon-bounce {
+	0%,
+	100%,
+	20%,
+	50%,
+	80% {
+	  @include transform(translateY(0));
+	}
+	40% {
+	  @include transform(translateY(-10px));
+	}
+	60% {
+	  @include transform(translateY(-5px));
+	}
+  }
+  
+
+  @keyframes tgtranslateX2{
+	0% {
+    -webkit-transform: translateX(-30px);
+    -moz-transform: translateX(-30px);
+    -ms-transform: translateX(-30px);
+    -o-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+  100% {
+    -webkit-transform: translatXY(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+}
+
+  @keyframes tgtranslateY2{
+	0% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  100% {
+    -webkit-transform: translatXY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+@include keyframes(borderanimate2){
+  0% {
+      transform: translate(-50%, -50%) scale(.8);
+  }
+60%{
+  opacity: 1;
+}
+    100% {
+      transform: translate(-50%, -50%) scale(2.5);
+      opacity: 0;
+    }
+}
+
+@include keyframes(tg-pulse){
+	0% {
+		-moz-box-shadow: 0 0 0 0 rgba(63, 116, 239, 0.6);
+		box-shadow: 0 0 0 0 rgba(63, 116, 239, 0.6);
+	}
+	70% {
+		-moz-box-shadow: 0 0 0 45px rgba(63, 116, 239, 0);
+		box-shadow: 0 0 0 45px rgba(63, 116, 239, 0);
+	}
+	100% {
+		-moz-box-shadow: 0 0 0 0 rgba(63, 116, 239, 0);
+		box-shadow: 0 0 0 0 rgba(63, 116, 239, 0);
+		}
+}
+
+@keyframes tgswing{
+	0% {
+    -webkit-transform: rotate(25deg);
+    -ms-transform:rotate(25deg);
+    transform: rotate(25deg);
+	}
+    100% { 
+      -webkit-transform: rotate(0deg);
+      -ms-transform:rotate(0deg);
+      transform: rotate(0deg);
+	}
+}
+
+@keyframes rotate2 {
+  from {
+    transform:rotate(0deg)
+  }
+  to {
+    transform:rotate(360deg)
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform:scale(.7)
+  }
+  50% {
+    transform:scale(1)
+  }
+  100% {
+    transform:scale(.7)
+  }
+}

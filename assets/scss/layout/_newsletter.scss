@@ -1,0 +1,84 @@
+@use '../utils' as *;
+
+/*=============================
+    17. newsletter css start 
+===============================*/
+.tg-newsletter {
+    &-bg {
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background-color: var(--tg-common-black);
+            z-index: -1;
+        }
+    }
+    &-wrap {
+        padding: 82px 60px;
+        padding-right: 50px;
+        border-radius: 5px;
+        background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+        @media #{$md}{
+            flex-wrap: wrap;
+        }
+        @media #{$xs}{
+            flex-wrap: wrap;
+            padding: 50px 15px;
+        }
+        & .tg-cta-input-box  {
+            @media #{$md}{
+                width: 100%;
+            }
+            @media #{$xs}{
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            & input {
+                border-radius: 5px;
+                width: 500px;
+                padding: 0 20px;
+                padding-right: 195px;
+                margin-right: 0;
+                height: 70px;
+                line-height: 70px;
+                border: 1px solid var(--tg-common-white);
+                @media #{$md}{
+                    width: 100%;
+                }
+                @media #{$xs}{
+                    width: 100%;
+                    padding-right: 20px;
+                }
+            }
+            & button {
+                position: absolute;
+                top: 50%;
+                right: 5px;
+                transform: translateY(-50%);
+                @media #{$xs}{
+                    position: static;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+    &-icon {
+        margin-right: 47px;
+        & span {
+            font-size: 100px;
+            color: var(--tg-common-white);
+        }
+    }
+    &-title-box {
+        @media #{$md,$xs}{
+           margin-bottom: 20px;
+        }
+    }
+    &-wrap-box {
+        margin-top: -160px;
+    }
+}

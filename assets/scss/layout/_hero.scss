@@ -1,0 +1,563 @@
+@use '../utils' as *;
+
+/*=============================
+    16. hero css start 
+===============================*/
+.tg-hero {
+    &-ptb {
+        padding-bottom: 240px;
+        padding-top: 130px;
+        @media #{$xs}{
+            padding: 100px 0;
+        }
+        @media #{$sm}{
+            padding-bottom: 120px;
+            padding-top: 130px;
+        }
+    }
+    &-subtitle {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 2.56px;
+        margin-bottom: 18px;
+        display: block;
+        text-transform: uppercase;
+        color: var(--tg-common-white);
+        @media #{$md,$xs}{
+            font-size: 12px;
+        }
+        @media #{$sm}{
+            font-size: 14px;
+        }
+    }
+    &-title {
+        font-size: 74px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: var(--tg-common-white);
+        @media #{$xxxl}{
+            font-size: 72px;
+        }
+        @media #{$xxl}{
+            font-size: 67px;
+            margin-right: 70px;
+        }
+        @media #{$xl}{
+            font-size: 60px;
+        }
+        @media #{$lg}{
+            font-size: 58px;
+        }
+        @media #{$md}{
+            font-size: 56px;
+        }
+        @media #{$xs}{
+            font-size: 32px;
+        }
+        @media #{$sm}{
+            font-size: 44px;
+        }
+    }
+    &-text {
+        & p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 28px;
+            color: var(--tg-common-white);
+            @media #{$xl}{
+                margin-right: 200px;
+                font-size: 16px;
+                & br {
+                    display: none;
+                }
+            }
+            @media #{$xs}{
+                font-size: 16px;
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-button {
+        line-height: 0;
+    }
+    &-thumb-box {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        line-height: 0;
+        @media #{$xxxl}{
+            right: -6%;
+        }
+        @media #{$xxl}{
+            right: -8%;
+        }
+        @media #{$xl}{
+            right: -12%;
+        }
+        @media #{$lg}{
+            right: -16%;
+        }
+        @media #{$md}{
+            right: -16%;
+        }
+        @media #{$xs}{
+            position: static;
+        }
+    }
+    &-thumb {
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        z-index: 1;
+        display: inline-block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        overflow: hidden;
+        & img {
+            position: relative;
+            z-index: 2;
+        }
+    }
+    &-content{
+        @media #{$xs}{
+            margin-bottom: 60px;
+        }
+    }
+    &-shape{
+        &-1 {
+            position: absolute;
+            bottom: 0;
+            left:-23%;
+            z-index: -1;
+            @media #{$xl}{
+               left: -18%;
+            }
+            @media #{$lg}{
+               left: -20%;
+            }
+        }
+        &-2 {
+            position: absolute;
+            bottom: 0;
+            left: 2%;
+            z-index: 4;
+        }
+        &-3 {
+            position: absolute;
+            top: -7%;
+            left: 0%;
+        }
+        &-4 {
+            position: absolute;
+            bottom: 1%;
+            left: 42%;
+            z-index: -1;
+        }
+        &-5 {
+            position: absolute;
+            top: -10%;
+            right: 17%;
+            z-index: -1;
+        }
+    }
+}
+.tg-hero-2{
+    &-bg{
+        padding-bottom: 160px;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media #{$xxl}{
+            padding-bottom: 150px;
+        }
+        @media #{$xl}{
+            padding-bottom: 140px;
+        }
+        @media #{$lg}{
+            padding-bottom: 140px;
+            background-position: left;
+        }
+        @media #{$md}{
+            padding-bottom: 120px;
+            background-position: left;
+        }
+        @media #{$xs}{
+            padding-bottom: 80px;
+            background-position: left;
+        }
+    }
+    &-content {
+        padding-top: 315px;
+        @media #{$xxl}{
+            padding-top: 280px;
+        }
+        @media #{$xl}{
+            padding-top: 270px;
+        }
+        @media #{$lg}{
+            padding-top: 235px;
+        }
+        @media #{$md}{
+            padding-top: 200px;
+            margin-bottom: 50px;
+        }
+        @media #{$xs}{
+            padding-top: 80px;
+            margin-bottom: 50px;
+        }
+        @media #{$xs}{
+            padding-top: 100px;
+        }
+        @media #{$sm}{
+            padding-top: 140px;
+        }
+        & .tg-hero-title {
+            color: var(--tg-common-black);
+            @media #{$md}{
+                & br {
+                    display: none;
+                }
+            }
+            @media #{$xs}{
+                font-size: 38px;
+                & br {
+                    display: none;
+                }
+            }
+            @media #{$sm}{
+                font-size: 58px;
+            }
+        }
+        & .tg-hero-text {
+            & p {
+                margin-right: 90px;
+                color: var(--tg-common-black);
+                @media #{$xs}{
+                   margin-right: 0;
+                }
+            }
+        }
+        & .tg-section-subtitle {
+            margin-bottom: 13px;
+        }
+        & .tg-btn-gradient {
+            height: 70px;
+            line-height: 70px;
+            @media #{$xs}{
+                height:50px;
+                line-height:50px;
+                padding: 0 25px;
+                font-size: 16px;
+            }
+        }
+    }
+    &-thumb {
+        & img {
+            max-width: inherit;
+            @media #{$xxl,$xl,$lg,$md,$xs}{
+                max-width: 100%;
+            }
+        }
+
+    }
+    &-thumb-box {
+        transform: translateX(-10px) translateY(55px);
+        @media #{$xxl}{
+            transform: translateX(-30px) translateY(55px);
+        }
+        @media #{$xl}{
+            transform: translateX(-35px) translateY(55px);
+        }
+        @media #{$lg}{
+            transform: translateX(-10px) translateY(103px);
+        }
+        @media #{$md,$xs}{
+            transform: translateX(0px) translateY(0px);
+        }
+    }
+    &-shape-1 {
+        position: absolute;
+        bottom: 0;
+        right: 2.8%;
+    }
+}
+
+.tg-hero-3 {
+    &-ptb {
+        padding-top: 270px;
+        padding-bottom: 150px;
+        @media #{$xxl}{
+            padding-top: 320px;
+        }
+        @media #{$xl}{
+            padding-top: 320px;
+        }
+        @media #{$lg}{
+            padding-top: 290px;
+        }
+        @media #{$md}{
+            padding-top: 220px;
+        }
+        @media #{$xs}{
+            padding-top: 180px;
+        }
+        @media #{$sm}{
+            padding-top: 220px;
+        }
+        & .tg-hero-text {
+            & p {
+                @media #{$lg}{
+                    margin-right: 40px;
+                }  
+                @media #{$md}{
+                    padding-right: 100px;
+                }  
+            }
+        }
+    }
+    &-content {
+        margin-right: 190px;
+        @media #{$xl}{
+            margin-right:30px;
+        }
+        @media #{$lg}{
+            margin-right:0px;
+        }
+        @media #{$md,$xs}{
+            margin-right:0px;
+            margin-bottom: 100px;
+        }
+        & .tg-hero-subtitle {
+            margin-bottom: 5px;
+        }
+    }
+    &-thumb-box {
+        position: absolute;
+        bottom: 65px;
+        right: 0;
+        @media #{$xxxl}{
+            right: -2%;
+        }
+        @media #{$xxl}{
+            right: -10%;
+        }
+        @media #{$xl}{
+            right: -15%;
+        }
+        @media #{$lg}{
+            right: -30%;
+        }
+        @media #{$md,$xs}{
+            transform: translateX(10%);
+            position: static;
+        }
+    }
+    &-thumb {
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        z-index: 1;
+        display: inline-block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        overflow: hidden;
+        & img {
+            height: 623px;
+            width: 812px;
+            @media #{$xl}{
+                height: 100%;
+                width: 100%;
+            }
+            @media #{$md,$xs}{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    &-shape {
+        &-1 {
+            position: absolute;
+            bottom: 40px;
+            right: 14%;
+            @media #{$xxl}{
+                right: 9%;
+            }
+            @media #{$xl}{
+                right: 7%;
+            }
+            @media #{$lg}{
+                right: -4%;
+            }
+            @media #{$md}{
+                bottom: 8%;
+                right: 18%;
+            }
+            @media #{$xs}{
+                bottom: 10.9%;
+                right: 9%;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+        }
+        &-3 {
+            position: absolute;
+            bottom: 18%;
+            left: 0;
+        }
+        &-4 {
+            position: absolute;
+            left: 2%;
+            top: 15%;
+            z-index: 9;
+            mix-blend-mode: color;
+        }
+    }
+}
+
+.tg-hero-4 {
+    &-height {
+        height: 856px;
+        @media #{$xl}{
+            height: 890px;
+        }   
+        @media #{$lg}{
+            height: 840px;
+        }   
+        @media #{$md}{
+            height: 1120px;
+        }   
+        @media #{$xs}{
+            height: 950px;
+        }   
+        @media #{$sm}{
+            height: 1080px;
+        }   
+        & .tg-hero-text {
+            & p {
+                @media #{$xl}{
+                    margin-right: 0;
+                }  
+                @media #{$lg}{
+                    margin-right: 0;
+                    font-size: 16px;
+                }  
+                @media #{$md}{
+                    margin-right: 120px;
+                    font-size: 16px;
+                }  
+                @media #{$xs}{
+                    margin-right: 0;
+                    font-size: 16px;
+                }  
+            }
+        }
+        & .tg-hero-title {
+            @media #{$lg}{
+                font-size: 56px;
+            } 
+        }
+    }
+    &-content {
+        padding-top: 245px;
+        @media #{$xl}{
+            padding-top: 270px;
+        } 
+        @media #{$lg}{
+            padding-top: 240px;
+        } 
+        @media #{$md}{
+            padding-top: 200px;
+            margin-bottom: 60px;
+        } 
+        @media #{$xs}{
+            padding-top: 180px;
+            margin-bottom: 35px;
+        } 
+    }
+    &-thumb-box {
+        position: absolute;
+        bottom: 9%;
+        left: 0;
+        @media #{$xxl}{
+            left: -11%;
+        }
+        @media #{$xl}{
+            left: -15%;
+        }
+        @media #{$lg}{
+            left: -27%;
+        }
+        @media #{$md,$xs}{
+            position: static;
+        }
+    }
+    &-main-thumb {
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        z-index: 1;
+        display: inline-block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        overflow: hidden;
+        & img {
+            @media #{$md}{
+                height: 400px;
+            }
+        }
+    }
+    &-thumb-sm {
+        position: absolute;
+        top: 1%;
+        right: -16%;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        z-index: 1;
+        display: inline-block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        overflow: hidden;
+        & img {
+            height: 370px;
+            width: 370px;
+        }
+    }
+    &-shape {
+        &-1 {
+            position: absolute;
+            bottom: 27px;
+            left: 0;
+            @media #{$xxl}{
+                left: -11%;
+            }
+            @media #{$xl}{
+                left: -15%;
+            }
+            @media #{$lg}{
+                left: -27%;
+            }
+            @media #{$md}{
+                bottom: 5%;
+                left: 0%;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+            & img {
+                @media #{$md}{
+                    height: 465px;
+                }
+            }
+        }
+        &-2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}

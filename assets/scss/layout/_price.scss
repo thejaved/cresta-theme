@@ -1,0 +1,101 @@
+@use '../utils' as *;
+
+/*=============================
+    18. price css start 
+===============================*/
+
+.tg-price {
+    &-item {
+        border-radius: 5px;
+        padding: 37px 44px;
+        margin-bottom: 40px;
+        position: relative;
+        background: var(--tg-common-white);
+        box-shadow: 0px 5px 60px 0px rgba(0, 0, 0, 0.05);
+        @media #{$md}{
+            padding: 35px 20px;
+        } 
+        @media #{$xs}{
+            padding: 35px 20px;
+            flex-wrap: wrap;
+        } 
+        @media #{$sm}{
+            padding: 35px 85px;
+        } 
+        &:hover {
+            &::after{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: -2px;
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+            z-index: -1;
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+            background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+        }
+    }
+    
+    &-title{
+        font-size: 32px;
+        font-weight: 500;
+        color: var(--tg-common-black);
+        @media #{$md,$xs}{
+            font-size: 22px;
+        }        
+    }
+    &-title-box{
+        width: 210px;
+        @media #{$md,$xs}{
+            width: auto;
+        } 
+    }
+    &-feature{
+        & ul{
+            & li{
+                position: relative;
+                list-style: none;
+                margin-bottom: 12px;
+                @media #{$md,$xs}{
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                } 
+                & i{
+                    margin-right: 18px;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    &-value{
+        font-size: 32px;
+        font-weight: 500;
+        color: var(--tg-common-black);
+        & i {
+            font-size: 18px;
+            font-weight: 400;
+            font-style: normal;
+            color: var(--tg-text-body);
+        }
+    }
+    &-btn-box{
+        @media #{$xs}{
+           margin-top: 30px;
+        } 
+        & .tg-btn-gradient-border{
+            margin-left: 88px;
+            @media #{$md,$xs}{
+                margin-left: 30px;
+            } 
+        }
+    }
+}

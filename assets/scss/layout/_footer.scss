@@ -1,0 +1,452 @@
+@use '../utils' as *;
+
+/*=============================
+    12. footer css start 
+===============================*/
+.tg-footer {
+    &-text {
+        & p {
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: -0.36px;
+            color: rgba(255, 255, 255, 0.7);
+            padding-right: 12px;
+            @media #{$md,$xs}{
+                font-size: 16px;
+            }
+        }
+    }
+    &-social {
+        & span {
+            font-size: 18px;
+            display: block;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--tg-common-white);
+        }
+        & a {
+            font-size: 15px;
+            color: var(--tg-common-white);
+            transition: .3s;
+            &:not(:last-child){
+                margin-right: 14px;
+            }
+            
+            &:hover {
+                color: var(--tg-theme-1);
+            }
+        }
+        
+    }
+    &-widget-title {
+        font-size: 22px;
+        margin-bottom: 30px;
+        color: var(--tg-common-white);
+        @media #{$xs}{
+            font-size: 20px;
+        }
+    }
+    &-list {
+        & ul {
+            & li {
+                list-style: none;
+                &:not(:last-child){
+                    margin-bottom: 7px;
+                }
+                & a {
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 28px; 
+                    letter-spacing: -0.36px;
+                    color: rgba(255, 255, 255, 0.7);
+                    display: inline-block;
+                    padding-left: 20px;
+                    position: relative;
+                    transition: .3s;
+                    @media #{$md,$xs}{
+                        font-size: 16px;
+                    }
+                    &:hover {
+                        color: var(--tg-common-white);
+                    }
+                    & i {
+                        position: absolute;
+                        top: 4px;
+                        left: 0;
+                        background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    &-Office-info {
+        & span {
+            display:block;
+            &:not(:last-child){
+                margin-bottom: 10px;
+            }
+            & b {
+                display: block;
+                font-size: 18px;
+                font-weight: 700; 
+                color: var(--tg-common-white);
+            }
+             a {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 28px; 
+                letter-spacing: -0.36px;
+                color: rgba(255, 255, 255, 0.7);
+                display: inline-block;
+                padding-left: 25px;
+                position: relative;
+                transition: .3s;
+                &:hover {
+                    color: var(--tg-common-white);
+                }
+                @media #{$md,$xs}{
+                    font-size: 16px;
+                }
+                & i {
+                    position: absolute;
+                    top: 4px;
+                    left: 0;
+                    background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+        &-2 {
+            & ul {
+                & li {
+                   list-style-type: none;
+                    &:not(:last-child){
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            & span {
+                display:block;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 28px; 
+                letter-spacing: -0.36px;
+                color: rgba(255, 255, 255, 0.7);
+                display: inline-block;
+                padding-left: 25px;
+                position: relative;
+                transition: .3s;
+                @media #{$md,$xs}{
+                    font-size: 16px;
+                }
+                & i {
+                    position: absolute;
+                    top: 4px;
+                    left: 0;
+                    background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                
+            }
+            & b {
+                display: block;
+                font-size: 18px;
+                font-weight: 700; 
+                color: var(--tg-common-white);
+            }
+        }
+    }
+    &-Office-schedule {
+        & h6 {
+            font-size: 18px;
+            color: var(--tg-common-white);
+        }
+        & span {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 28px; 
+            letter-spacing: -0.36px;
+            color: rgba(255, 255, 255, 0.7);
+            display: inline-block;
+            @media #{$md,$xs}{
+                font-size: 16px;
+            }
+        }
+    }
+    &-input-box {
+        & input {
+            border-radius: 5px;
+            padding: 0 20px;
+            margin-bottom: 20px;
+            background-color: transparent;
+            border: 1px solid  rgba(255, 255, 255, 0.2);
+            color: var(--tg-common-white);
+            @media #{$md,$xs}{
+                font-size: 16px;
+            }
+            @include tg-placeholder{
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: -0.36px;
+                color: rgba(255, 255, 255, 0.7);
+                @media #{$md,$xs}{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    &-wrap-2 {
+        margin-top: -110px;
+    }
+    &-shape {
+        &-1 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+        &-2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+        &-3 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+    }
+    &-contact {
+        & a {
+            font-size: 18px;
+            letter-spacing: -0.36px;
+            color: rgba(255, 255, 255, 0.7);
+            & i {
+                font-size: 22px;
+                margin-right: 10px;
+                transform: translateY(2px);
+                display: inline-block;
+                background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+    &-style-2 {
+        border-bottom: 1px solid #111536;
+        & .tg-footer-social {
+            & a {
+                height: 35px;
+                width: 35px;
+                border-radius: 5px;
+                font-size: 15px;
+                transition: .3s;
+                display: inline-block;
+                line-height: 35px;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.8);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    transition: .3s;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: -1;
+                    background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+                }
+                &:not(:last-child){
+                    margin-right: 14px;
+                }
+                
+                &:hover {
+                    color: var(--tg-common-white);
+                    border: 1px solid var(--tg-theme-1);
+                    &::after{
+                       opacity: 1;
+                       visibility: visible;
+                    }
+                }
+            }
+            
+        }
+        & .tg-footer-text {
+            & p {
+                padding-right: 46px;
+            }
+        }
+        & .tg-footer-input-box {
+            & input {
+                border: none;
+                padding-right: 75px;
+                background-color: #111536;
+                transition: .3s;
+                border: 1px solid transparent;
+                &:focus {
+                    border: 1px solid var(--tg-theme-1);
+                }
+            }
+            & button {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 60px;
+                width: 60px;
+                line-height: 60px;
+                text-align: center;
+                border-radius: 5px;
+                color: var(--tg-common-white);
+                background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+            }
+        }
+    }
+    &-style-3{
+        & .tg-footer-text {
+            & p {
+                padding-right: 0px;
+                @media #{$md}{
+                    padding-right: 80px;
+                }
+            }
+        }
+        & .tg-footer-text-Office-info {
+            & span {
+                &:not(:last-child){
+                    margin-bottom: 18px;
+                }
+            }
+        }
+    }
+}
+.tg-copyright {
+    &-ptb {
+        padding: 27px 0;
+    }
+    &-border {
+        border-top: 1px solid rgba(204, 204, 204, 0.23);
+    }
+    &-left {
+        & p {
+            font-size: 18px;
+            margin-bottom: 0;
+            letter-spacing: -0.36px;
+            color: rgba(255, 255, 255, 0.7);
+            @media #{$md,$xs}{
+                font-size: 15px;
+            }
+        }
+    }
+    &-right {
+        & a {
+            font-size: 18px;
+            letter-spacing: -0.36px;
+            color: rgba(255, 255, 255, 0.7);
+            @media #{$md,$xs}{
+                font-size: 15px;
+            }
+            &:not(:last-child){
+                margin-right: 25px;
+                @media #{$md,$xs}{
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+.footer-col-1 {
+    margin-top: -15px;
+    
+}
+.footer-col-2 {
+    margin-left: 55px;
+    @media #{$xl}{
+        margin-left: 30px;
+    }
+    @media #{$md,$xs}{
+        margin-left: 0;
+    }
+}
+.footer-col-3 {
+    margin-left: -45px;
+    @media #{$xl}{
+        margin-left: -25px;
+    }
+    @media #{$lg,$md,$xs}{
+        margin-left: 0;
+    }
+}
+.footer-col-2-2{
+    padding-left: 80px;
+    @media #{$md,$xs}{
+        padding-left: 0;
+    }
+}
+.footer-col-2-3{
+    padding-left: 70px;
+    @media #{$md,$xs}{
+        padding-left: 0;
+    }
+}
+.footer-col-3-2{
+    padding-left: 90px;
+    @media #{$md}{
+        padding-left: 30px;;
+    }
+    @media #{$xs}{
+        padding-left: 0;
+    }
+}
+.footer-col-3-3{
+    margin-left: -10px;
+    @media #{$md,$xs}{
+        margin-left: 0;
+    }
+}
+.footer-col-3-4{
+    @media #{$md}{
+        margin-left: 30px;
+    }
+    @media #{$xs}{
+        margin-left: 0;
+    }
+}
+.footer-col-4-2{
+    margin-left: 5px;
+    @media #{$md}{
+        margin-left: 70px;
+    }
+    @media #{$xs}{
+        margin-left: 0;
+    }
+}
+.footer-col-4-3{
+    margin-left: 75px;
+    @media #{$md,$xs}{
+        margin-left: 0;
+    }
+}
+.footer-col-4-4{
+    margin-left: 55px;
+    @media #{$lg}{
+        margin-left: 0px;
+    }
+    @media #{$md}{
+        margin-left: 70px;
+    }
+    @media #{$xs}{
+        margin-left: 0;
+    }
+}

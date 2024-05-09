@@ -1,0 +1,234 @@
+@use '../utils' as *;
+
+/*=============================
+    13. funfact css start 
+===============================*/
+
+.tg-funfact{
+    &-bg{
+        span{
+            height: 220px;
+            background-color: var(--tg-grey-1);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+    }
+    &-wrap {
+        padding: 78px 20px;
+        border-radius: 5px;
+        background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+        & .row{
+            [class*="col-"]{
+                &:last-child{
+                    & .tg-funfact-item{
+                        &::after{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-shape{
+        position: absolute;
+        top: 0;
+        right: 0;
+        &-2{
+            position: absolute;
+            bottom: -25%;
+            left: 0;
+            & img{
+                opacity: .3;
+            }
+        }
+    }
+    &-item{
+        position: relative;
+        @media #{$md,$xs}{
+            margin-bottom: 30px;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            top: -20px;
+            right: 0;
+            height: 225px;
+            width: 1px;
+            background-color: #CCCCCC;
+            @media #{$md,$xs}{
+                display: none;
+            }
+        }
+        & .icon{
+            height: 80px;
+            width: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 40px;
+            display: inline-block;
+            color: var(--tg-common-white);
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-bottom: 15px;
+        }
+        & span{
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1;
+            display: block;
+            letter-spacing: -0.36px;
+            color: var(--tg-common-white);
+        }
+    }
+    &-number{
+        text-align: center;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -1.48px;
+        color: var(--tg-common-white);
+        margin-bottom: 0;
+        & i{
+            font-style: normal;
+        }
+        @media #{$xl}{
+           font-size: 46px;
+        }
+        @media #{$lg}{
+           font-size: 42px;
+        }
+        @media #{$md,$xs}{
+           font-size:38px;
+        }
+    }
+}
+.tg-funfact-2{
+    &-wrapper {
+        padding: 83px 55px;
+        @media #{$md}{
+            padding: 50px 25px;
+        }
+        @media #{$xs}{
+            padding: 50px 25px;
+            padding-bottom: 20px;
+            flex-wrap: wrap;
+        }
+ 
+        & .tg-funfact-item {
+            &::after{
+                display: none;
+            }
+            @media #{$md}{
+                margin-bottom: 0;
+            }
+            @media #{$xs}{
+                margin-bottom: 0;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            & .icon {
+                font-size: 60px;
+                height: 100px;
+                width: 100px;
+                line-height: 100px;
+                border-radius: 5px;
+                margin-bottom: 0;
+                margin-right: 27px;
+                background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+                @media #{$md,$xs}{
+                    font-size: 50px;
+                    height: 80px;
+                    width: 80px;
+                    line-height: 80px;
+                    margin-right: 18px;
+                }
+            }
+        }
+        & .tg-funfact-number {
+            margin-bottom: 17px;
+            @media #{$md}{
+                text-align: start;
+            }
+        }
+    }
+}
+
+.tg-funfact-style-2 {
+    & .tg-funfact-item {
+        padding: 20px 58px;
+        margin-left: 39px;
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        &::after{
+            display: none;
+        }
+        & h5 {
+            display: inline-block;
+            width: 146px;
+        }
+        & .icon {
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--tg-common-white);
+            color: var(--tg-gradient-1);
+        }
+    }
+    & .tg-funfact-2-left {
+        @media #{$md,$xs}{
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.tg-funfact-style-3 {
+    & .tg-funfact-number {
+        width: 130px;
+        margin-bottom: 18px;
+        color: var(--tg-common-black);
+    }
+    & .tg-funfact-item {
+        & span {
+            color: var(--tg-common-black);
+        }
+        & .icon {
+            font-size: 60px;
+            margin-bottom: 10px;
+            background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        &::after{
+            height: 100%;
+            top: 0;
+            right: -81%;
+            @media #{$lg,$md,$xs}{
+                display: none;
+            }  
+        }
+    }
+    & .tg-funfact-2-title-box{
+        @media #{$xs}{
+           margin-bottom: 30px;
+        }
+    }
+    & .tg-funfact-wrapper {
+        margin-left: 30px;
+        @media #{$xs}{
+            margin-left: 0;
+            flex-wrap: wrap;
+         }
+        & .tg-funfact-item {
+            &:last-child{
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    }
+}

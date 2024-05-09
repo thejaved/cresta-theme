@@ -1,0 +1,72 @@
+@use '../utils' as *;
+
+/*=============================
+    23. work css start 
+===============================*/
+
+.tg-work {
+    &-ptb {
+        padding-top: 290px;
+        padding-bottom: 430px;
+    }
+    &-item {
+        padding: 25px 20px;
+        padding-bottom: 35px;
+        background-color:var(--tg-theme-2);
+        &:hover {
+            & .tg-work-icon {
+                & span {
+                    transform: scaleX(-1);
+                    -webkit-transform: scaleX(-1);
+                }
+            }
+        }
+    }
+    &-icon {
+        & span {
+            font-size: 65px;
+            display: inline-block;
+            color: var(--tg-common-white);
+            webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+        }
+    }
+    &-title {
+        font-size: 22px;
+        color: var(--tg-common-white);
+        @media #{$sm}{
+            font-size: 20px;
+         }
+    }
+    &-number {
+        position: absolute;
+        left: 0;
+        top: 0;
+        line-height: 0;
+        & span {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+            color: var(--tg-common-white);
+            border-radius:5px 0 ;
+            background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+        }
+    }
+    &-shape {
+        &-1 {
+            position: absolute;
+            top: 14%;
+            left: 0;
+            z-index: -1;
+        }
+        &-2 {
+            position: absolute;
+            bottom: 31%;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+    }
+}

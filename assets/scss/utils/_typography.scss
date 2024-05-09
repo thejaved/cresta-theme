@@ -1,0 +1,22 @@
+
+// font url
+
+$font-url: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet';
+
+// font family
+$font-family: (
+    'ff': (
+        'body': "'Space Grotesk', sans-serif",
+        'heading': "'Space Grotesk', sans-serif",
+        'p': "'Space Grotesk', sans-serif",
+        'fontawesome': '"Font Awesome 6 Pro"',
+    )
+);
+
+// font size
+$font-size: (
+    "fz": (
+        'body': 16px,
+        'p': 18px,
+    )
+);

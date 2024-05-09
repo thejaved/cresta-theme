@@ -1,0 +1,26 @@
+@use '../utils' as *;
+
+/*=============================
+    - Background color
+===============================*/
+.grey-bg {
+	background: var(--tg-grey-1);
+}
+.white-bg {
+	background: var(--tg-common-white);
+}
+.black-bg {
+	background: var(--tg-common-black);
+}
+.black-bg-2 {
+	background: var(--tg-common-black-dark);
+}
+.theme-bg {
+	background: var(--tg-theme-2);
+}
+.gradient-bg {
+	background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+}
+.gradient-grey-bg {
+	background: linear-gradient(91deg, rgba(53, 30, 224, 0.1) 0%, rgba(63, 116, 239, 0.1) 100%);
+}

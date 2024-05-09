@@ -1,0 +1,204 @@
+@use '../utils' as *;
+
+/*=============================
+	1. Button style
+===============================*/
+
+.tg-btn{
+    &-gradient {
+        font-size: 18px;
+        font-weight: 700;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        padding: 0 29px;
+        height: 60px;
+        display: inline-block;
+        line-height: 60px;
+        border-radius: 5px;
+        color: var(--tg-common-white);
+        background-image: none;
+        background-size: 300% 100%;
+        background-position: 0% 100%;
+        -webkit-transition: all 0.5s ease-out 0s;
+        -moz-transition: all 0.5s ease-out 0s;
+        -ms-transition: all 0.5s ease-out 0s;
+        -o-transition: all 0.5s ease-out 0s;
+        transition: all 0.5s ease-out 0s;
+        background-image: linear-gradient(to right, var(--tg-gradient-1), var(--tg-gradient-2), var(--tg-gradient-2), var(--tg-gradient-1));
+        @media #{$md,$xs}{
+            height:50px;
+            line-height:50px;
+            padding: 0 25px;
+            font-size: 16px;
+        }
+        &.sm{
+            height: 40px;
+            line-height: 37px;
+            padding: 0px 20px;
+        }
+        &.lg {
+            padding: 0 40px;
+        }
+        & i {
+            display: inline-block;
+            margin-left: 6px;            
+        }
+        & span {
+            display: inline-block;
+            margin-left: 6px;
+        }
+        &:hover {
+            color: var(--tg-common-white);
+            background-position: 100% 100%;
+        }
+    }
+    &-gradient-border {
+        font-size: 18px;
+        font-weight: 700;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        padding: 1px;
+        height: 60px;
+        display: inline-block;
+        line-height: 60px;
+        border-radius: 5px;
+        background-image: none;
+        background-size: 300% 100%;
+        background-position: 0% 100%;
+        -webkit-transition: all 0.5s ease-out 0s;
+        -moz-transition: all 0.5s ease-out 0s;
+        -ms-transition: all 0.5s ease-out 0s;
+        -o-transition: all 0.5s ease-out 0s;
+        transition: all 0.5s ease-out 0s;
+        color: var(--tg-common-black);
+        background-image: linear-gradient(to right, var(--tg-gradient-1), var(--tg-gradient-2), var(--tg-gradient-2), var(--tg-gradient-1));
+        & span{
+            background-color: var(--tg-common-white);
+            align-items: center;
+            border-radius: 5px;
+            padding: 0px 28px;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            transition: background .5s ease;
+            width: 100%;
+            & svg{
+                transform: translateY(2px);
+                margin-left: 10px;
+            }
+        }
+        &:hover{
+            background-position: 100% 100%;
+            & span{
+                color: var(--tg-common-white);
+                background: transparent;
+            }
+        }
+    }
+    &-white{
+        font-size: 18px;
+        font-weight: 700;
+        padding: 0 30px;
+        height: 60px;
+        line-height: 60px;
+        display: inline-block;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        color: var(--tg-common-black); 
+        background-color: var(--tg-common-white);
+        & i {
+            display: inline-block;
+            margin-left: 5px;            
+        }
+        @media #{$md,$xs}{
+            height:50px;
+            line-height:50px;
+            padding: 0 25px;
+            font-size: 16px;
+        }
+        & span{
+            font-size: 14px;
+            margin-left: 12px;
+        }
+    }
+    &-white-border{
+        font-size: 18px;
+        font-weight: 700;
+        padding: 0 29px;
+        height: 60px;
+        display: inline-block;
+        line-height: 60px;
+        border-radius: 5px;
+        color: var(--tg-common-white);  
+        position: relative;
+        border: 1px solid var(--tg-common-white);
+        transition: .3s;
+        background: transparent;
+        & i,svg {
+            display: inline-block;
+            margin-left: 5px;            
+        }
+        @media #{$md,$xs}{
+            height:50px;
+            line-height:50px;
+            padding: 0 25px;
+            font-size: 16px;
+        }
+        &:hover {
+            color: var(--tg-common-black);
+            background-color: var(--tg-common-white);
+        }
+    }
+    &-grey-border {
+        font-size: 18px;
+        font-weight: 700;
+        padding: 0 29px;
+        height: 60px;
+        display: inline-block;
+        line-height: 60px;
+        border-radius: 5px;
+        color: var(--tg-common-black);  
+        position: relative;
+        border: 1px solid var(--tg-border-1);
+        background: transparent;
+        &::after{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+            border-radius: 5px;
+            background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+        }
+        & span,svg {
+            display: inline-block;
+            margin-left: 5px; 
+            position: relative;
+            z-index: 1;      
+            transition: .3s;     
+            transform: translateY(-1px);
+        }
+        &:hover {
+            color: var(--tg-common-white);
+            border: 1px solid var(--tg-theme-1);
+            &::after{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        @media #{$md,$xs}{
+            height:50px;
+            line-height:50px;
+            padding: 0 25px;
+            font-size: 16px;
+        }
+    }
+}

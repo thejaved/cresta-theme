@@ -1,0 +1,257 @@
+@use '../utils' as *;
+
+/*=============================
+    21. team css start 
+===============================*/
+.tg-team {
+    &-bg {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    &-item {
+        padding: 38px 50px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        &:hover {
+            & .tg-team-thumb{
+                & img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    &-title {
+        font-size: 22px;
+        margin-bottom: 12px;
+        color: var(--tg-common-white);
+    }
+    &-author-info {
+        & span {
+            font-size: 18px;
+            color: var(--tg-common-white);
+        }
+    }
+    &-thumb {
+        overflow: hidden;
+        border-radius: 50%;
+        & img {
+            transition: 1.3s all ease;
+            border-radius: 50%;
+            width: 100%;
+        }
+    }
+    &-social-box {
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        &:hover {
+            cursor: pointer;
+            & .tg-team-social {
+                opacity: 1;
+                visibility: visible;
+                bottom: 50px;
+            }
+        }
+        & span {
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            display: inline-block;
+            color: var(--tg-common-white);
+            background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+        }
+    }
+    &-social {
+        position: absolute;
+        bottom:90px;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s all ease;
+        & a {
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--tg-common-white);
+            background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+        }
+    }
+    &-shape {
+        &-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+        }
+    }
+}
+.tg-team-2 {
+    &-item {
+        border-radius: 0 0 5px 5px;
+        &:hover {
+            & .tg-team-2-thumb{
+                & img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    &-title {
+        font-size: 22px;
+        @media #{$lg}{
+            font-size: 20px;
+        }
+    }
+    &-title-box {
+        @media #{$xs}{
+            margin-bottom: 30px;
+        }
+    }
+
+    &-thumb {
+        & img {
+            width: 100%;
+            transition: 1.3s all ease;
+        }
+    }
+
+    &-content {
+        padding: 32px 40px;
+        @media #{$lg,$md,$xs}{
+            padding: 32px 20px;
+        }  
+    }
+
+    &-social {
+        position: absolute;
+        bottom: 120px;
+        right: 20px;
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s all ease;
+        background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+        @media #{$lg,$md,$xs}{
+            right: 0;
+        } 
+        & a {
+            font-size: 14px;
+            color: var(--tg-common-white);
+        }
+
+        &-box {
+            & span {
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                border-radius: 5px;
+                text-align: center;
+                display: inline-block;
+                color: var(--tg-common-white);
+                background: var(--tg-common-black);
+                transition: 0.5s;
+                position: relative;
+                & i {
+                    position: relative;
+                    z-index: 1;
+                }
+                &::after{
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .3s;
+                    border-radius: 5px;
+                    background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+                }
+            }
+
+            &:hover {
+                & .tg-team-2-social {
+                    opacity: 1;
+                    visibility: visible;
+                    bottom: 98px;
+                }
+                & span {
+                    &::after{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+    &-arrow-box {
+        & button {
+            height: 60px;
+            width: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 5px;
+            position: relative;
+            z-index: 4;
+            transition: .3s;
+            font-size: 18px;
+            color: var(--tg-common-black);
+            border: 1px solid transparent;
+            &:hover {
+                color: var(--tg-common-white);
+                &::after{
+                    opacity: 0;
+                }
+            }
+            &::before{
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                height:100%;
+                width:100%;
+                z-index: -1;
+                border-radius: 5px;
+                background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 50%;
+                z-index: -1;
+                transition: .3s;
+                height:calc(100% - 2px);
+                width:calc(100% - 2px);
+                transform: translate(-50%,-50%);
+                border-radius: 5px;
+                background-color: var(--tg-common-white);
+                @media #{$sm}{
+                    top: 49%;
+                }
+            }
+            &.team-2-prev{
+                margin-left: 15px;
+            }
+        }
+    }
+ 
+}

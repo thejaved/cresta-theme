@@ -1,0 +1,172 @@
+@use '../utils' as *;
+
+/*=============================
+    11. feature css start 
+===============================*/
+
+.tg-feature {
+    &-wrap {
+        margin-top: -125px;
+    }
+
+    &-item {
+        padding: 30px 15px;
+        padding-bottom: 37px;
+        border-radius: 5px;
+        background-color: var(--tg-common-white);
+        box-shadow: 0px 5px 60px rgba(0, 0, 0, 0.05);
+        @media #{$md,$xs}{
+            margin-bottom: 30px;
+        }
+        &:hover {
+            & .tg-feature-icon {
+                & span {
+                   & i {
+                       animation: icon-bounce 0.8s 1;
+                   }
+                }
+            }
+        }
+    }
+
+    &-icon {
+        display: inline-block;
+
+        & span {
+            height: 80px;
+            width: 80px;
+            line-height: 80px;
+            text-align: center;
+            display: inline-block;
+            border-radius: 5px;
+            font-size: 38px;
+            color: var(--tg-common-white);
+            background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+            & i {
+                display: inline-block;
+                transition: all 0.3s ease-out 0s;
+            }
+            @media #{$lg,$md,$xs} {
+                height: 60px;
+                width: 60px;
+                line-height: 60px;
+            }
+        }
+        &.pl {
+            & span {
+                & i {
+                    padding-left: 9px;
+                }
+            }
+        }
+    }
+
+    &-title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.5;
+
+        @media #{$xl} {
+            font-size: 19px;
+        }
+
+        @media #{$lg,$md,$xs} {
+            font-size: 18px;
+        }
+    }
+}
+.tg-feature-2 {
+
+    &-item {
+        padding: 40px;
+        background-color: var(--tg-common-white);
+        box-shadow: 0px 5px 60px rgba(0, 0, 0, 0.05);
+        @media #{$lg,$md,$xs}{
+            padding: 40px 25px;
+        }
+        &:hover {
+            & .tg-feature-2-icon {
+               & span {
+                    &::after{
+                        opacity: 1;
+                        visibility: visible;
+                        transform: scale(1);
+                    }
+                    & i {
+                        color: var(--tg-common-white);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: var(--tg-common-white);
+
+                    }
+               }
+            }
+        }
+    }
+    &-icon {
+        margin-bottom: 36px;
+        &.pl {
+            & span {
+                & i {
+                    padding-left: 6px;
+                }
+            }
+        }
+        & span {
+            height: 80px;
+            width: 80px;
+            font-size: 42px;
+            line-height: 80px;
+            text-align: center;
+            border-radius: 5px;
+            display: inline-block;
+            position: relative;
+            background: linear-gradient(94deg, rgba(53, 30, 224, 0.1) 0%, rgba(63, 116, 239, 0.1) 100%);
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(94deg, rgb(53, 30, 224) 0%, rgb(63, 116, 239) 100%);
+                -webkit-transition: all 035s ease-out 0s;
+                -moz-transition: all 0.3s ease-out 0s;
+                -ms-transition: all 0.3s ease-out 0s;
+                -o-transition: all 0.3s ease-out 0s;
+                transition: all 0.3s ease-out 0s;
+                opacity: 0;
+                border-radius: 5px;
+                visibility: hidden;
+                transform: scale(.7);
+            }
+            & > i {
+                position: relative;
+                z-index: 1;
+                width: 60px;
+                display: inline-block;
+                background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
+                transition: all .3s cubic-bezier(.645,.045,.355,1);
+
+            }
+        }
+    }
+    &-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+        @media #{$lg}{
+            font-size: 20px;
+        }
+    }
+    &-content {
+        & p {
+            font-size: 18px;
+            margin-bottom: 0;
+            @media #{$lg,$md,$xs}{
+                font-size: 15px;
+            }
+        }
+    }
+}

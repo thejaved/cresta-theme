@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "flaticon";
+  src: url("../fonts/flaticon.ttf") format("truetype"),
+url("../fonts/flaticon.woff") format("woff"),
+url("../fonts/flaticon.woff2") format("woff2"),
+url("../fonts/flaticon.eot") format("embedded-opentype"),
+url("../fonts/flaticon.svg") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+  font-family: flaticon !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-001-laptop:before { content: "\f100"; }
+.flaticon-002-api:before { content: "\f101"; }
+.flaticon-003-cloud-computing:before { content: "\f102"; }
+.flaticon-004-server:before { content: "\f103"; }
+.flaticon-005-printer:before { content: "\f104"; }
+.flaticon-006-cloud-computing:before { content: "\f105"; }
+.flaticon-007-laptop:before { content: "\f106"; }
+.flaticon-008-wifi:before { content: "\f107"; }
+.flaticon-009-laptop:before { content: "\f108"; }
+.flaticon-010-isp:before { content: "\f109"; }
+.flaticon-011-gaming:before { content: "\f10a"; }
+.flaticon-012-sim-card:before { content: "\f10b"; }
+.flaticon-013-streaming:before { content: "\f10c"; }
+.flaticon-014-smartphone:before { content: "\f10d"; }
+.flaticon-015-email:before { content: "\f10e"; }
+.flaticon-016-sync:before { content: "\f10f"; }
+.flaticon-017-vpn:before { content: "\f110"; }
+.flaticon-018-server:before { content: "\f111"; }
+.flaticon-019-laptop:before { content: "\f112"; }
+.flaticon-020-pendrive:before { content: "\f113"; }
+.flaticon-021-hdd:before { content: "\f114"; }
+.flaticon-022-ssd:before { content: "\f115"; }
+.flaticon-023-hifi:before { content: "\f116"; }
+.flaticon-024-coffee:before { content: "\f117"; }
+.flaticon-025-folder:before { content: "\f118"; }
+.flaticon-026-info:before { content: "\f119"; }
+.flaticon-027-laptop:before { content: "\f11a"; }
+.flaticon-028-smartphone:before { content: "\f11b"; }
+.flaticon-029-webcam:before { content: "\f11c"; }
+.flaticon-030-laptop:before { content: "\f11d"; }
+.flaticon-031-http:before { content: "\f11e"; }
+.flaticon-032-phone-call:before { content: "\f11f"; }
+.flaticon-033-ethernet:before { content: "\f120"; }
+.flaticon-034-streaming:before { content: "\f121"; }
+.flaticon-035-gaming:before { content: "\f122"; }
+.flaticon-036-smartphone:before { content: "\f123"; }
+.flaticon-037-ram:before { content: "\f124"; }
+.flaticon-038-cd-burning:before { content: "\f125"; }
+.flaticon-039-mouse:before { content: "\f126"; }
+.flaticon-040-laptop:before { content: "\f127"; }

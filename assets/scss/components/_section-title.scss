@@ -1,0 +1,73 @@
+@use '../utils' as *;
+
+/*=============================
+    00. Section Title
+===============================*/
+.tg-section-subtitle{
+    font-size: 16px;    
+    font-weight: 700;
+    letter-spacing: 2.56px;
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media #{$md}{
+        font-size: 14px;
+    }
+    @media #{$xs}{
+        font-size: 13px;
+    }
+}
+.tg-section-subtitle-2{
+    font-size: 16px;    
+    font-weight: 700;
+    letter-spacing: 2.56px;
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    color: var(--tg-common-white);
+    @media #{$md}{
+        font-size: 14px;
+    }
+    @media #{$xs}{
+        font-size: 13px;
+    }
+}
+
+.tg-section-title{
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: -1.3px;
+    color: var(--tg-common-black);
+    & span {
+        background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    @media #{$xxl}{
+        font-size: 52px;
+    }
+    @media #{$xl}{
+        font-size: 43px;
+    }
+    @media #{$lg}{
+        font-size: 37px;
+    }
+    @media #{$md}{
+        font-size: 34px;
+        & br {
+            display: none;
+        }
+    }
+    @media #{$xs}{
+        font-size: 30px;
+        & br {
+            display: none;
+        }
+    }
+    @media #{$sm}{
+        font-size: 35px;
+    }
+}

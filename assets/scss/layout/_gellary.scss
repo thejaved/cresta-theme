@@ -1,0 +1,204 @@
+@use '../utils' as *;
+
+/*=============================
+    14. gellary css start 
+===============================*/
+
+.tg-gellary {
+    &-thumb-box {
+        position: relative;
+        &:hover {
+            & .tg-gellary-thumb {
+                & img {
+                    transform: scale(1.1);
+                }
+                &::after{
+                    height: 100%;
+                    opacity: 0;
+                    -webkit-transition: all 400ms linear;
+                    transition: all 400ms linear;
+                }
+            }
+        }
+   
+    }
+    &-thumb {
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        & img {
+            width: 100%;
+            border-radius: 5px;
+            transition: 1.3s all ease;
+        }
+        &::after{
+            background: rgba(255, 255, 255, 0.3);
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 0;
+            opacity: 1;
+            pointer-events: none;
+        }
+    }
+    &-content {
+        position: absolute;
+        bottom: -30px;
+        left: 0px;
+        right: 75px;
+        display:block;
+        padding: 10px;
+        border-radius:0 5px 5px 5px;
+        background-color: var(--tg-common-white);
+        transition: all 0.5s ease-in-out;
+    }
+    &-title {
+        font-size: 22px;
+        padding-left: 10px;
+        @media #{$lg,$md,$xs}{
+            font-size: 18px;
+            padding-left: 0;
+        }
+        @media #{$sm}{
+            padding-left: 10px;
+            font-size: 20px;
+        }
+    }
+    &-icon {
+        & a {
+            height: 56px;
+            line-height: 56px;
+            width: 56px;
+            border-radius:5px;
+            display: inline-block;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 900;
+            background-color:var(--tg-grey-1);
+            position: relative;
+            &:hover {
+                background-color: transparent;
+                &::after{
+                    transform: scale(1);
+                }
+                & i {
+                    color: var(--tg-common-white);
+                }
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                transform: scale(0);
+                transition: .3s;
+                border-radius:5px;
+                background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+            }
+            & i {
+                position: relative;
+                z-index: 1;
+                transition: .3s;
+                color: var(--tg-theme-1);
+            }
+            @media #{$lg,$md,$xs}{
+                height: 40px;
+                line-height: 40px;
+                width: 40px;
+            }
+        }
+    }
+    &-title-box{
+        @media #{$xs}{
+           margin-bottom: 30px;
+        }
+    }
+    &-wrap {
+        padding: 110px 60px 110px 0;
+        @media #{$xs}{
+            padding-right: 0;
+        }
+    }
+    &-bg {
+       position: relative;
+       margin-top: -245px;
+       &::after{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 84%;
+            background-color:var(--tg-grey-1);
+            z-index: -1;
+            @media #{$xxxl}{
+                width: 92%;
+            }
+            @media #{$xxl}{
+                width: 95%;
+            }
+            @media #{$xl}{
+                width: 98%;
+            }
+            @media #{$lg,$md,$xs}{
+                width: 100%;
+            }
+       }
+    }
+    &-arrow-box {
+        & button {
+            height: 60px;
+            width: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            position: relative;
+            z-index: 4;
+            transition: .4s;
+            font-size: 18px;
+            background: linear-gradient(94deg, rgba(53, 30, 224, 0.2) 0%, rgba(63, 116, 239, 0.2) 100%);
+            &::after{
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                visibility: hidden;
+                transition: .3s;
+                border-radius: 50%;
+                background: linear-gradient(94deg, rgba(53, 30, 224) 0%, rgba(63, 116, 239) 100%);
+            }
+            & span {
+                position: relative;
+                z-index: 1;
+                transition: .3s;
+                color: var(--tg-common-black);
+            }
+            &:hover {
+                & span {
+                    color:var(--tg-common-white);
+                }
+                &::after{
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+            }
+            &.gellary-prev{
+                margin-left: 20px;
+            }
+        }
+    }
+    &-active {
+        margin-left: -485px;
+        @media #{$xs}{
+            margin-left: 0;
+        }
+    }
+}

@@ -1,0 +1,134 @@
+@use '../utils' as *;
+
+/*=============================
+    10. faq css start 
+===============================*/
+
+.tg-faq{
+    &-thumb{
+        &-sub{
+            position: absolute;
+            bottom: -170px;
+            right: 60px;
+            z-index: 2;
+            border:12px solid var(--tg-common-white);
+            animation: tgtranslateX2 4s infinite alternate;
+            @media #{$md}{
+                transform: scale(.75);
+            }
+            @media #{$xs}{
+               position: static;
+               margin-top: 30px;
+               animation: none;
+            }
+  
+            & img {
+                @media #{$xs}{
+                    width: 100%;
+                }
+            }
+            & .video-play-btn{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                border-radius: 5px;
+                height: 100px;
+                width: 100px;
+                line-height: 100px;
+                text-align: center;
+                display: inline-block;
+                color: var(--tg-common-white);
+                z-index: 1;
+                animation: tg-pulse 1.1s infinite alternate;
+                background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+                @media #{$xs}{
+                    display: none;
+                }
+            }
+        }
+    }
+    &-thumb-main {
+        & img {
+            @media #{$sm}{
+                width: 100%;
+            }
+        }
+    }
+    &-thumb-wrap {
+        @media #{$lg}{
+            padding-right: 60px;
+        }
+        @media #{$md}{
+            margin-bottom: 220px;
+            text-align: center;
+        }
+        @media #{$xs}{
+            margin-bottom: 50px;
+        }
+    }
+    &-shape{
+        position: absolute;
+        bottom: -17%;
+        left: 0;
+        z-index: -1;
+        & img{
+            opacity: .1;
+        }
+    }
+}
+
+.tg-faq-2 {
+    &-thumb-box {
+        padding-right: 30px;
+        &:hover {
+            &::after{
+               width: 64%;
+            }
+            &::before{
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            top: -32px;
+            right: 5px;
+            width: 64%;
+            height: calc(100% + 70px);
+            background: var(--tg-grey-1);
+            border-radius: 5px;
+            z-index: -1;
+            transition: .5s;
+            @media #{$md}{
+                right: 9.5%;
+            }  
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            top: -32px;
+            right: 0;
+            width: 5%;
+            height: calc(100% + 70px);
+            border-radius: 5px;
+            z-index: -2;
+            transition: .5s;
+            background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+            @media #{$md}{
+                right: 9%;
+            } 
+        }
+    }
+    &-thumb{
+        & img {
+            border-radius: 5px;
+        }
+    }
+    &-left {
+        @media #{$md,$xs}{
+            margin-bottom: 90px;
+        }  
+    }
+}

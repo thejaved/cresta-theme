@@ -1,0 +1,178 @@
+@use '../utils' as *;
+
+
+.tg-custom-accordion {
+    & .accordion-items {
+        border-bottom: 1px solid var(--tg-border-1);
+        padding: 15px 0;
+        @media #{$lg,$md,$xs}{
+            padding:0;
+        }
+    }
+    & .accordion-buttons {
+        position: relative;
+        width: 100%;
+        font-weight: 700;
+        font-size: 22px;
+        text-align: left;
+        padding: 21px 60px;
+        padding-left: 0px;    
+        transition: .3s;
+        @media #{$lg}{
+            font-size: 17px;
+        }  
+        @media #{$md}{
+            font-size: 20px;
+        }  
+        @media #{$xs}{
+            font-size: 15px;
+        }  
+        @media #{$sm}{
+            font-size: 17px;
+        }  
+        &::after {
+            position: absolute;
+            content: "\f068";
+            font-family: 'Font Awesome 6 Pro';
+            top: 21px;
+            right:0px;
+            font-weight: 700;
+            font-size: 12px;
+            opacity: 1;
+            transition: .3s;
+            height: 22px;
+            width: 22px;
+            line-height: 21px;
+            border-radius: 5px;
+            text-align: center;
+            border: 1px solid var(--tg-border-1);
+            @media #{$xs}{
+              right: 20px;
+            } 
+        }
+
+        &.collapsed {
+            &::after {
+                content: '\f067';
+            }
+        }
+       
+    }
+    & .collapsed {
+        position: relative;
+        z-index: 99;
+    }
+    & .accordion-body {
+        padding:0px;
+        padding-bottom: 25px;
+        padding-right: 40px;
+        position: relative;
+        z-index: 1;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        @media #{$xl} {
+            font-size: 15px;
+        }
+        @media #{$lg}{
+            font-size: 14px;
+        }
+        @media #{$md}{
+            font-size: 14px;
+        }
+        @media #{$xs}{
+            font-size: 13px;
+            padding-right: 0;
+            line-height: 26px;
+        }
+        @media #{$sm}{
+            font-size: 14px;
+        }
+    }
+}
+.tg-custom-accordion-2 {
+    & .accordion-items {
+        &:not(:last-child){
+            margin-bottom: 22px;
+        }
+    }
+    & .accordion-buttons {
+        position: relative;
+        width: 100%;
+        font-weight: 700;
+        font-size: 18px;
+        text-align: left;
+        padding: 24px 60px;
+        padding-left: 20px;    
+        transition: .3s;
+        border-radius: 5px;
+        border: 1px solid var(--tg-border-1);
+        @media #{$lg}{
+            font-size: 17px;
+        }  
+        @media #{$md}{
+            font-size: 20px;
+        }  
+        @media #{$xs}{
+            font-size: 16px;
+        }  
+        @media #{$sm}{
+            font-size: 17px;
+        }  
+        &::after {
+            position: absolute;
+            content: "\f178";
+            font-family: 'Font Awesome 6 Pro';
+            top: 21px;
+            right:20px;
+            font-weight: 700;
+            font-size: 12px;
+            opacity: 1;
+            transition: .3s;
+            height: 22px;
+            width: 22px;
+            line-height: 21px;
+            border-radius: 5px;
+            text-align: center;
+            color: var(--tg-theme-1);
+            @media #{$xs}{
+              right: 20px;
+            } 
+        }
+
+        &:not(.collapsed){
+            &::after {
+                transform: rotate(90deg);
+            }
+        }
+       
+    }
+    & .collapsed {
+        position: relative;
+        z-index: 99;
+    }
+    & .accordion-body {
+        padding:0px;
+        padding-top: 25px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        position: relative;
+        z-index: 1;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.36px;
+        @media #{$xl} {
+            font-size: 15px;
+        }
+        @media #{$lg}{
+            font-size: 14px;
+        }
+        @media #{$xs}{
+            font-size: 14px;
+            padding-right: 0;
+            line-height: 26px;
+        }
+
+    }
+}

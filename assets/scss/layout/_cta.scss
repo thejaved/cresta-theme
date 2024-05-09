@@ -1,0 +1,145 @@
+@use '../utils' as *;
+
+/*=============================
+    08. cta css start 
+===============================*/
+
+.tg-cta{
+    &-title-box{
+        padding-left: 60px;
+        @media #{$lg}{
+            padding-left: 80px;
+        }
+        @media #{$md,$xs}{
+            padding-left: 0;
+            margin-bottom: 25px;
+        }
+    }
+    &-bg{
+        padding: 80px 0;
+        position: relative;
+        &::after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            border-radius: 5px;
+            margin-left: 300px;
+            background: linear-gradient(94deg, var(--tg-gradient-1) 0%, var(--tg-gradient-2) 100%);
+            z-index: -2;
+            @media #{$xxxl}{
+                margin-left: 70px;
+            }
+            @media #{$xxl}{
+                margin-left: 50px;
+            }
+            @media #{$xl}{
+                margin-left: 40px;
+            }
+            @media #{$lg,$md,$xs}{
+                margin-left: 0;
+            }
+        }
+    }
+    &-input-box{
+        @media #{$xs}{
+            flex-wrap: wrap;
+        }
+        & input{
+            padding-left: 0;
+            background-color: transparent;
+            border: 0;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1;
+            margin-right: 30px;
+            letter-spacing: -0.36px;
+            color: var(--tg-common-white);
+            border-bottom: 1px solid var(--tg-border-1);
+            @include tg-placeholder{
+                color: var(--tg-common-white);
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 1;
+                letter-spacing: -0.36px;
+            }
+            @media #{$xs}{
+                margin-bottom: 30px;
+            }
+            &:focus{
+                border-color: var(--tg-common-white);
+            }
+        }
+        & .tg-btn-white{
+            flex: 0 0 auto;
+        }
+    }
+    &-shape-1-1{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+.tg-cta-2 {
+    &-area {
+        @media #{$md,$xs}{
+            margin-top: 0;
+        }
+    }
+    &-ptb {
+        background-color: var(--tg-common-white);
+        box-shadow: 0px 5px 60px 0px rgba(0, 0, 0, 0.05);
+    }
+    &-bg {
+        position: absolute;
+        left: 0;
+        z-index: 3;
+        bottom: 0;
+        & img {
+            @media #{$lg}{
+                height: 320px;
+            }
+            @media #{$md}{
+                height: 280px;
+            }
+        }
+    }
+    &-wrapper{
+        position: relative;
+        padding: 62px 0;
+        &::before {
+            position: absolute;
+            width: 595px;
+            height: 595px;
+            background: var(--tg-gradient-1);
+            content: "";
+            border-radius: 50%;
+            top: 16%;
+            left: -9%;
+            @media #{$lg}{
+                left: -19%;
+            }
+            @media #{$md}{
+                left: -30%;
+            }
+            @media #{$xs}{
+                display: none;
+            }
+        }       
+    }
+    &-content {
+        margin-left: 48px;
+        & .tg-section-title {
+            @media #{$xxl}{
+                font-size: 53px;
+            } 
+        }
+    }
+    &-btn-box {
+        line-height: 0;
+    }
+}
